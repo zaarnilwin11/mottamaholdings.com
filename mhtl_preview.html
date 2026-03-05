@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mottama Holding</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#1d2671;
+background:linear-gradient(135deg,#1d2671,#c33764);
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.brand{
+font-size:44px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.message{
+font-size:20px;
+line-height:1.6;
+margin-bottom:35px;
+}
+
+.countdown{
+font-size:36px;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div>
+
+<div class="brand">Mottama Holdings</div>
+
+<div class="message">
+🌊 Thingyan season has arrived!<br><br>
+While Myanmar celebrates the New Year with water,
+our digital headquarters is refreshing its systems.<br><br>
+We'll return soon with renewed energy
+and improved performance.
+</div>
+
+<div id="countdown" class="countdown"></div>
+
+</div>
+
+<script>
+
+var countDownDate = new Date().getTime() + (1000*60*60*72);
+
+setInterval(function(){
+
+var now = new Date().getTime();
+var distance = countDownDate - now;
+
+var h = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+var m = Math.floor((distance%(1000*60*60))/(1000*60));
+var s = Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("countdown").innerHTML = h+"h "+m+"m "+s+"s";
+
+},1000);
+
+</script>
+
+</body>
+</html>
